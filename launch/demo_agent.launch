@@ -1,3 +1,7 @@
 <launch>
   <node name="agent" pkg="demo_agent" type="agent.py" />
+  <node name="footprint" pkg="demo_agent" type="footprint.py" />
+  <node name="costmap" pkg="costmap_2d" type="costmap_2d_node">
+    <param name="~/costmap/robot_base_frame" type="string" value="ego_racecar/base_link" />
+  </node>
 </launch>
